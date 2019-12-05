@@ -15,12 +15,14 @@ def home():
 def movies():
     json_string = """
                     {
-                    "title" : "Black Panther", 
-                    "releaseDate" : "2/16/2018",
-                    "image_url": "https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/KXC1W2-920x584.jpg"
+                    "title" : "A Quiet Place", 
+                    "releaseDate" : "20/4//2018",
+                    "image_url": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjplsSl_J7mAhUmyYUKHUrcATUQjRx6BAgBEAQ&url=https%3A%2F%2Fmedium.com%2F%40ericcoyote%2Fa-quiet-place-horror-in-the-age-of-trump-ef9ea19d7d2c&psig=AOvVaw2004Tcbs2MFPn84ueIxwLe&ust=1575649654920321"
                     }
                     """
-    return render_template('movie.html', movie={})
+    dima = json.loads(json_string)
+               
+    return render_template('movie.html', movie=dima)
 
 
 @app.route('/tvshows')
